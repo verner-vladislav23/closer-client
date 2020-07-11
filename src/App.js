@@ -6,9 +6,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>HELLO DEV TEAM!</Text>
-      <StatusBar style='auto' />
+      <StatusBar style="auto" />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})

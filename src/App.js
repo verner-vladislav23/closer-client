@@ -2,13 +2,10 @@ import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
+import UsersScreen from './screens/UsersScreen'
+
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>HELLO DEV TEAM!</Text>
-      <StatusBar style="auto" />
-    </View>
-  )
+  return <UsersScreen />
 }
 
 const styles = StyleSheet.create({

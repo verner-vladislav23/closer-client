@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { View, StyleSheet, Image, Text } from 'react-native'
 import ProfileText from '../components/ProfileText'
-import { style } from '../components/ProfileBackground'
+import { style } from '../../components/ProfileBackground'
 
 export default class ProfileScreen extends Component {
   render = () => {
@@ -16,21 +16,3 @@ export default class ProfileScreen extends Component {
     )
   }
 }
-
-const styles = StyleSheet.create({
-	name: {
-      color: '#98C1D9'
-  },
-  distance: {
-    color: '#000'
-  },
-  info: {
-    color: '#243241'
-  },
-  picture: {
-    alignContent: 'center',
-    borderRadius: 12,
-    width: 150, 
-    height: 150
-  }
-  })

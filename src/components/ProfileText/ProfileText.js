@@ -10,13 +10,4 @@ const ProfileText = ({title, text}) => {
     )
 }
 
-const styles = StyleSheet.create({
-    header: {
-        color: '#EE6C4D',
-    },
-    text: {
-        color: '#293241'
-    }
-  })
-
 export default ProfileText

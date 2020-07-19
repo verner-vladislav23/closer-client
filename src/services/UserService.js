@@ -5,9 +5,13 @@ export default class UserService extends Http {
 
   static logout() {}
 
+  static registration() {}
+
   static getUsers() {
     return this.get('/people')
   }
 
-  static getUser() {}
+  static getUser(userId) {
+    return this.get(`/people/${userId}`)
+  }
 }

@@ -20,7 +20,7 @@ const UsersScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {loading ? (
-        <ActivityIndicator size="large" />
+        <ActivityIndicator size='large' />
       ) : (
         <FlatList
           data={!!result && result.results}

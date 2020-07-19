@@ -14,7 +14,7 @@ const UserCart = (props) => {
   return (
     <ListItem
       title={name}
-      subtitle="CEO"
+      subtitle='CEO'
       leftAvatar={{ source: { uri: AVATAR_URL } }}
       onPress={onSelect}
       chevron

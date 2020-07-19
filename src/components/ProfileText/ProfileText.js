@@ -1,13 +1,13 @@
+/* eslint-disable no-unused-expressions */
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View } from 'react-native'
+import { style } from './style'
 
-const ProfileText = ({title, text}) => {
-    return (
-        <View>
-            <Text style={styles.header}> {title} </Text>
-            <Text style={styles.text}> {text} </Text>
-        </View>
-    )
+const ProfileText = ({ title, text }) => {
+  <View>
+    <Text style={style.header}> {title} </Text>
+    <Text style={style.text}> {text} </Text>
+  </View>
 }
 
 export default ProfileText

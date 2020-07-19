@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-	name: {
-      color: '#98C1D9'
+  name: {
+    color: '#98C1D9'
   },
   distance: {
     color: '#000'
@@ -13,7 +13,18 @@ const styles = StyleSheet.create({
   picture: {
     alignContent: 'center',
     borderRadius: 12,
-    width: 150, 
+    width: 150,
     height: 150
+  },
+  back: {
+    flex: 1,
+    padding: 20,
+    paddingTop: 50,
+    backgroundColor: '#EE6C4D'
+  },
+  front: {
+    flex: 1,
+    backgroundColor: '#fff',
+    borderRadius: 12
   }
-  })
+})

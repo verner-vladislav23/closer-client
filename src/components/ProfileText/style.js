@@ -5,6 +5,8 @@ const styles = StyleSheet.create({
     color: '#EE6C4D',
   },
   text: {
-    color: '#293241'
+    color: '#C4C4C4'
   }
 })
+
+export default styles

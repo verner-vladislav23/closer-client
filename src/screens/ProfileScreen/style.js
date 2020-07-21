@@ -3,15 +3,17 @@ import { StyleSheet } from 'react-native'
 const styles = StyleSheet.create({
   name: {
     color: '#54B0F3',
-    fontFamily: 'Montserrat',
-    fontStyle: 'normal',
-    fontSize: 20
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingTop: 17
   },
   info: {
-    color: '#797F85'
+    color: '#797F85',
+    paddingVertical: 5
   },
   distance: {
-    color: '#C4C4C4'
+    color: '#C4C4C4',
+    paddingBottom: 20
   },
   picture: {
     borderRadius: 12,
@@ -21,15 +23,19 @@ const styles = StyleSheet.create({
   back: {
     flex: 1,
     padding: 20,
-    paddingTop: 50,
-    backgroundColor: '#EE6C4D',
-    margin: 50
+    //paddingTop: 65,
+    backgroundColor: '#EE6C4D'
   },
-  front: {
+  front1: {
     flex: 1,
+    margin: 10,
+    alignItems: 'center'
+  },
+  front2: {
+    flexGrow: 1,
     backgroundColor: '#fff',
     borderRadius: 12,
-    alignItems: 'center'
+    justifyContent: 'center'
   }
 })
 

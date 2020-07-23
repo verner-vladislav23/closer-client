@@ -1,18 +1,19 @@
 import { StyleSheet } from 'react-native'
+import Global from '../../constants/Global'
 
 const styles = StyleSheet.create({
   name: {
-    color: '#54B0F3',
+    color: Global.COLORS.BLUE,
     fontWeight: 'bold',
     fontSize: 20,
     paddingTop: 17
   },
   info: {
-    color: '#797F85',
+    color: Global.COLORS.GRAY,
     paddingVertical: 5
   },
   distance: {
-    color: '#C4C4C4',
+    color: Global.COLORS.LIGHTGRAY,
     paddingBottom: 20
   },
   picture: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     //paddingTop: 65,
-    backgroundColor: '#EE6C4D'
+    backgroundColor: Global.COLORS.ORANGE
   },
   front1: {
     flex: 1,
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
   },
   front2: {
     flexGrow: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Global.COLORS.WHITE,
     borderRadius: 12,
     justifyContent: 'center'
   }

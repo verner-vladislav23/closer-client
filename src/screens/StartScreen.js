@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
 import React, { Component } from 'react'
 import { View, Button, StyleSheet } from 'react-native'
+import propTypes from 'prop-types'
 
 const ar = { fn: 'nin', ln: 'bib',
   photo: 'https://wl-adme.cf.tsp.li/resize/728x/jpg/cf3/3eb/cebf385e9da99914a27f31c22d.jpg',
@@ -11,15 +11,20 @@ const ar = { fn: 'nin', ln: 'bib',
   status: 'sdfdfrfgsdf', socialLinks: { vk: 'dsff', instagram: '' } }
 
 export default class StartScreen extends Component {
+  handleNavigate = () => {
+    this.props.navigation.navigate('profile', { person: ar })
+  }
   render() {
     return (
       <View style={styles.container}>
-		    <Button title={'open'} onPress={() => {
-          this.props.navigation.navigate('profile', { person: ar })
-        }} />
+		    <Button title={'open'} onPress={this.handleNavigate} />
       </View>
     )
   }
+}
+
+StartScreen.propTypes = {
+  navigation: propTypes.object.isRequired
 }
 
 const styles = StyleSheet.create({

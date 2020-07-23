@@ -6,7 +6,8 @@ const vkIcon = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDp8BQwkf
 const instagramIcon = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/768px-Instagram_icon.png'
 const d = 'https://wl-adme.cf.tsp.li/resize/728x/jpg/cf3/3eb/cebf385e9da99914a27f31c22d.jpg'
 
-const ProfileIcon = ({ info }) => (
+//todo
+const LinksBlock = ({ info }) => (
   <View style={style.content}>
     <Text style={style.text}> Как связаться </Text>
     <View style={style.pictureContent}>
@@ -16,4 +17,4 @@ const ProfileIcon = ({ info }) => (
   </View>
 )
 
-export default ProfileIcon
+export default LinksBlock

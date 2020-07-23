@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import Global from '../../constants/Global'
 
 const styles = StyleSheet.create({
   content: {
@@ -6,11 +7,11 @@ const styles = StyleSheet.create({
     paddingBottom: 15
   },
   header: {
-    color: '#EE6C4D',
+    color: Global.COLORS.ORANGE,
     fontWeight: 'bold'
   },
   text: {
-    color: '#C4C4C4'
+    color: Global.COLORS.LIGHTGRAY
   }
 })
 

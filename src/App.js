@@ -1,18 +1,14 @@
-import { StatusBar } from 'expo-status-bar'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-import UsersScreen from './screens/UsersScreen'
+import AutorizationScreen from './screens/AutorizationScreen/index'
 
 export default function App() {
-  return <UsersScreen />
+  return <AutorizationScreen />
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    flex: 1
+  }
 })

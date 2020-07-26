@@ -31,12 +31,6 @@
       }
     ],
     "array-callback-return": 0,
-//    "no-console": [
-//      1,
-//      {
-//        "allow": ["warn", "error"]
-//      }
-//    ],
     "no-debugger": 1,
     "no-var": 1,
     "no-trailing-spaces": 1,
@@ -44,7 +38,8 @@
     "no-underscore-dangle": 0,
     "no-alert": 0,
     "no-lone-blocks": 0,
-    "jsx-quotes": 1,
+    "jsx-quotes": [1, "prefer-single"],
+    "quotes": ["error", "single"],
     "no-multi-spaces": 1,
     "block-spacing": 1,
     "brace-style": 1,

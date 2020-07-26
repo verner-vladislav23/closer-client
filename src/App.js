@@ -1,18 +1,22 @@
-import React, { Component } from 'react'
-import { View } from 'react-native'
+import React from 'react'
+
 import { NavigationContainer } from '@react-navigation/native'
-import { Navigation } from './navigation/Navigation'
+import { createStackNavigator } from '@react-navigation/stack'
 
-export default class App extends Component {
+import UsersScreen from './screens/UsersScreen'
+import ProfileScreen from './screens/ProfileScreen'
+import LoginScreen from './screens/LoginScreen'
 
+const Stack = createStackNavigator()
 
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <NavigationContainer>
-          <Navigation />
-        </NavigationContainer>
-      </View>
-    )
-  }
-}
+const App = () => (
+  <NavigationContainer>
+    <Stack.Navigator>
+      <Stack.Screen name='LoginScreen' component={LoginScreen} />
+      <Stack.Screen name='UsersScreen' component={UsersScreen} />
+      <Stack.Screen name='ProfileScreen' component={ProfileScreen} />
+    </Stack.Navigator>
+  </NavigationContainer>
+)
+
+export default App

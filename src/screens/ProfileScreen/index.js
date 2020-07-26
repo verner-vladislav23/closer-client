@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react'
-import { ScrollView, View, Image, Text } from 'react-native'
 import propTypes from 'prop-types'
-import ProfileInfoCard from '../../components/ProfileInfoCard/ProfileInfoCard'
-import LinksBlock from '../../components/LinksBlock/LinksBlock'
+import { ScrollView, View, Image, Text } from 'react-native'
+
+import ProfileInfoCard from 'components/ProfileInfoCard/ProfileInfoCard'
+import LinksBlock from 'components/LinksBlock/LinksBlock'
 
 import UserService from 'services/UserService'
 import useRequest from 'hooks/useRequest'

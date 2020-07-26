@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import Global from '../../constants/Global'
+import { ORANGE } from 'constants/colors'
 
 const styles = StyleSheet.create({
   content: {
@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     paddingTop: 15
   },
   text: {
-    color: Global.COLORS.ORANGE,
+    color: ORANGE,
     fontWeight: 'bold',
     paddingBottom: 10
   },

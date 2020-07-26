@@ -26,7 +26,11 @@ const UsersScreen = ({ navigation }) => {
           style={styles.list}
           data={!!result && result.results}
           renderItem={({ item: user }, index) => (
-            <UserCart key={index} {...user} onSelect={() => onSelectUser(user)} />
+            <UserCart
+              key={index}
+              {...user}
+              onSelect={() => onSelectUser(user)}
+            />
           )}
         />
       )}

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ListItem } from 'react-native-elements'
-import { View, Image, Text, TouchableOpacity } from 'react-native'
+import { Text } from 'react-native'
+import { ListItem, Badge } from 'react-native-elements'
 
 import styles from './style'
 
@@ -15,6 +15,22 @@ const UserCart = (props) => {
     <ListItem
       title={name}
       subtitle='CEO'
+      badge={{
+        value: <Text style={{ color: 'white' }}>{22}m</Text>,
+        textStyle: {
+          color: 'white',
+        },
+        containerStyle: {
+          padding: 10,
+        },
+        badgeStyle: {
+          backgroundColor: 'grey',
+          paddingTop: 10,
+          paddingBottom: 10,
+          paddingLeft: 6,
+          paddingRight: 6,
+        },
+      }}
       leftAvatar={{ source: { uri: AVATAR_URL } }}
       onPress={onSelect}
       chevron

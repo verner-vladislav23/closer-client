@@ -23,6 +23,7 @@ const UsersScreen = ({ navigation }) => {
         <ActivityIndicator size='large' />
       ) : (
         <FlatList
+          style={styles.list}
           data={!!result && result.results}
           renderItem={({ item: user }, index) => (
             <UserCart key={index} onSelect={() => onSelectUser(user)} {...user} />

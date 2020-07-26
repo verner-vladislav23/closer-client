@@ -6,37 +6,37 @@ const styles = StyleSheet.create({
     color: BLUE,
     fontWeight: 'bold',
     fontSize: 20,
-    paddingTop: 17
+    paddingTop: 17,
   },
   info: {
     color: GRAY,
-    paddingVertical: 5
+    paddingVertical: 5,
   },
   distance: {
     color: LIGHTGRAY,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   picture: {
     borderRadius: 12,
     width: 150,
-    height: 150
+    height: 150,
   },
   back: {
     flex: 1,
     padding: 20,
-    backgroundColor: ORANGE
+    backgroundColor: ORANGE,
   },
   front1: {
     flex: 1,
     margin: 10,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   front2: {
     flexGrow: 1,
     backgroundColor: WHITE,
     borderRadius: 12,
-    justifyContent: 'center'
-  }
+    justifyContent: 'center',
+  },
 })
 
 export default styles

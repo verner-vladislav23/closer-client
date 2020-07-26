@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Text } from 'react-native'
-import { ListItem, Badge } from 'react-native-elements'
+import { ListItem } from 'react-native-elements'
 
 import styles from './style'
 

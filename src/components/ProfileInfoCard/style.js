@@ -4,15 +4,15 @@ import { ORANGE, LIGHTGRAY } from 'constants/colors'
 const styles = StyleSheet.create({
   content: {
     alignSelf: 'stretch',
-    paddingBottom: 15
+    paddingBottom: 15,
   },
   header: {
     color: ORANGE,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   text: {
-    color: LIGHTGRAY
-  }
+    color: LIGHTGRAY,
+  },
 })
 
 export default styles

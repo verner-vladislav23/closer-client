@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { ScrollView, View, Image, Text } from 'react-native'
 import propTypes from 'prop-types'
 import ProfileInfoCard from '../../components/ProfileInfoCard/ProfileInfoCard'

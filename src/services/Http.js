@@ -11,9 +11,17 @@ export default class Http {
     return await response.json()
   }
 
-  static async get(url, options = {}) {
+  static async get (url, options = {}) {
     const response = await fetch(`${this.BASE_URL}${url}`, {
       method: 'GET',
+    })
+
+    return this._parseResponse(response)
+  }
+
+  static async post (url, payload) {
+    const response = await fetch(`${this.BASE_URL}${url}`, {
+      method: 'POST'
     })
 
     return this._parseResponse(response)

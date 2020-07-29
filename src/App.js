@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-import AutorizationScreen from './screens/AutorizationScreen/index'
+import LoginScreen from './screens/LoginScreen/'
+import RegisterScreen from './screens/RegisterScreen/'
 
 export default function App() {
-  return <AutorizationScreen />
+  return <RegisterScreen />
 }
 
 const styles = StyleSheet.create({

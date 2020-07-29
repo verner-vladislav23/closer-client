@@ -14,19 +14,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     paddingTop: 25
   },
-  itemsContent: {
-    color: Global.COLORS.LIGHTGRAY,
-    fontSize: 14,
+  content: {
+    flexDirection: 'row',
     paddingTop: 50,
-    paddingLeft: 30,
-    paddingRight: 100,
-    alignSelf: 'stretch'
+    paddingHorizontal: 30
+  },
+  itemsContent: {
+    flex: 3,
+    paddingRight: 30
   },
   item: {
-    color: Global.COLORS.LIGHTGRAY,
     borderBottomWidth: 1,
     borderColor: Global.COLORS.LIGHTGRAY,
-    paddingTop: 25
+    marginBottom: 10
   },
   button: {
     justifyContent: 'center'

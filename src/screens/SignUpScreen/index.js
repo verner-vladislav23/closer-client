@@ -13,6 +13,7 @@ const SignUpScreen = ({ navigation }) => {
   const [userName, setUserName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [errorMessage, setErrorMessage] = useState(null)
 
   const onScreenChange = () => {
     navigation.navigate('LoginScreen')
@@ -43,8 +44,14 @@ const SignUpScreen = ({ navigation }) => {
 
     try {
 
-      await UserService.registration ({ firstName: firstN, lastName: secondN, username: userName, email: email, password: password })
-
+      const response = await UserService.registration ({ firstName: firstN, lastName: secondN, username: userName, email: email, password: password })
+      if (response.status == 'ok') {
+        AsyncStorage.setItem('jwt', response.data)
+        navigation.navigate('UsersScreen')
+      } else {
+        setErrorMessage(response.message)
+        // todo читаемый вид ошибки
+      }
     } catch (error) {
 
     }
@@ -57,6 +64,7 @@ const SignUpScreen = ({ navigation }) => {
       <View style={styles.front} behavior='padding'>
         <Text style={styles.active}>Register</Text>
         <Text style={styles.notActive} onPress={onScreenChange}>Login</Text>
+        {errorMessage && <Text style={styles.errorMessage}>{errorMessage}</Text>}
         <View style={styles.content}>
           <View style={styles.itemsContent} >
             <Text>First name</Text>

@@ -14,6 +14,10 @@ const style = StyleSheet.create({
     fontSize: 20,
     paddingTop: 25
   },
+  errorMessage: {
+    color: ORANGE,
+    paddingTop: 25
+  },
   content: {
     flexDirection: 'row',
     paddingTop: 50,

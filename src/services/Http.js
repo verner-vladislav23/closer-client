@@ -17,9 +17,8 @@ export default class Http {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': await AsyncStorage.getItem('jwt')
-      },
-      body: JSON.stringify(options)
+        'x-auth-token': await AsyncStorage.getItem('jwt')
+      }
     })
     return this._parseResponse(response)
   }
@@ -31,8 +30,7 @@ export default class Http {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(payload)
-    }).then(response => response.text())
-      .then(text => AsyncStorage.setItem('jwt', text))
+    })
     return this._parseResponse(response)
   }
 }

@@ -1,10 +1,12 @@
 import React, { useCallback, useState } from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, AsyncStorage } from 'react-native'
+import { CommonActions } from '@react-navigation/native'
 
 import { Input } from 'components'
 import UserService from 'services/UserService'
 
 import styles from './style'
+
 
 const SignUpScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(false)
@@ -16,7 +18,15 @@ const SignUpScreen = ({ navigation }) => {
   const [errorMessage, setErrorMessage] = useState(null)
 
   const onScreenChange = () => {
-    navigation.navigate('LoginScreen')
+    //navigation.navigate('LoginScreen')
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [
+          { name: 'LoginScreen' }
+        ],
+      })
+    )
   }
 
   const onChangeFirstName = (firstN) => {
@@ -47,7 +57,15 @@ const SignUpScreen = ({ navigation }) => {
       const response = await UserService.registration ({ firstName: firstN, lastName: secondN, username: userName, email: email, password: password })
       if (response.status == 'ok') {
         AsyncStorage.setItem('jwt', response.data)
-        navigation.navigate('UsersScreen')
+        //navigation.navigate('UsersScreen')
+        navigation.dispatch(
+          CommonActions.reset({
+            index: 0,
+            routes: [
+              { name: 'UsersScreen' }
+            ],
+          })
+        )
       } else {
         setErrorMessage(response.message)
         // todo читаемый вид ошибки

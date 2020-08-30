@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import { View, Text, Button, AsyncStorage } from 'react-native'
+import { CommonActions } from '@react-navigation/native'
 
 import { Input } from 'components'
 import UserService from 'services/UserService'
@@ -13,7 +14,15 @@ const LoginScreen = ({ navigation }) => {
   const [errorMessage, setErrorMessage] = useState(null)
 
   const onScreenChange = () => {
-    navigation.navigate('SignUpScreen')
+    //navigation.navigate('SignUpScreen')
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [
+          { name: 'SignUpScreen' }
+        ],
+      })
+    )
   }
 
   const onChangeUserName = (userName) => {
@@ -31,7 +40,17 @@ const LoginScreen = ({ navigation }) => {
       const response = await UserService.login({ username: userName, password: password })
       if (response.status == 'ok') {
         AsyncStorage.setItem('jwt', response.data)
-        navigation.navigate('UsersScreen')
+        //navigation.navigate('UsersScreen')
+
+        // todo warning
+        navigation.dispatch(
+          CommonActions.reset({
+            index: 0,
+            routes: [
+              { name: 'UsersScreen' }
+            ],
+          })
+        )
       } else {
         setErrorMessage(response.message)
         // todo читаемый вид ошибки

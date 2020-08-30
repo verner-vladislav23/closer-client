@@ -6,7 +6,9 @@ export default class UserService extends Http {
     return this.post('/auth/login', payload)
   }
 
-  static logout () {}
+  static logout () {
+    AsyncStorage.removeItem('jwt')
+  }
 
   static registration (payload) {
     return this.post('/auth/register', payload)

@@ -33,4 +33,16 @@ export default class Http {
     })
     return this._parseResponse(response)
   }
+
+  static async put (url, options = {}) {
+    const response = await fetch(`${this.BASE_URL}${url}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-auth-token': await AsyncStorage.getItem('jwt')
+      },
+      body: JSON.stringify(options)
+    })
+    return this._parseResponse(response)
+  }
 }

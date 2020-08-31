@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
-import { Text, View, FlatList, ActivityIndicator } from 'react-native'
+import { Text, View, FlatList, ActivityIndicator, Button } from 'react-native'
 
 import { UserCart } from 'components'
 
@@ -17,22 +17,29 @@ const UsersScreen = ({ navigation }) => {
     navigation.navigate('ProfileScreen', { user })
   }
 
+  const onEditProfile = (user) => {
+    navigation.navigate('EditScreen', { user })
+  }
+
   return (
     <View style={styles.container}>
       {loading ? (
         <ActivityIndicator size='large' />
       ) : (
-        <FlatList
-          style={styles.list}
-          data={!!result && result.results}
-          renderItem={({ item: user }, index) => (
-            <UserCart
-              key={index}
-              {...user}
-              onSelect={() => onSelectUser(user)}
-            />
-          )}
-        />
+        <View>
+          <FlatList
+            style={styles.list}
+            data={!!result && result.results}
+            renderItem={({ item: user }, index) => (
+              <UserCart
+                key={index}
+                {...user}
+                onSelect={() => onSelectUser(user)}
+              />
+            )}
+          />
+          <Button title='Profile edit' onPress={() => onEditProfile(result)} />
+        </View>
       )}
     </View>
   )

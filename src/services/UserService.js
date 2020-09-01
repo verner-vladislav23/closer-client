@@ -1,17 +1,24 @@
 import Http from './Http'
+import { AsyncStorage } from 'react-native'
 
 export default class UserService extends Http {
-  static login() {}
-
-  static logout() {}
-
-  static registration() {}
-
-  static getUsers() {
-    return this.get('/people')
+  static login (payload) {
+    return this.post('/auth/login', payload)
   }
 
-  static getUser(userId) {
-    return this.get(`/people/${userId}`)
+  static logout () {
+    AsyncStorage.removeItem('jwt')
+  }
+
+  static registration (payload) {
+    return this.post('/auth/register', payload)
+  }
+
+  static getUsers () {
+    return this.get('/user/near-users')
+  }
+
+  static getUser (userId) {
+    return this.get(`/user/profile/${userId}`)
   }
 }

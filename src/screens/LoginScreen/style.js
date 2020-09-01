@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native'
 import { BLUE, GRAY, LIGHTGRAY, ORANGE, WHITE } from 'constants/colors'
 
-const styles = StyleSheet.create({
+const style = StyleSheet.create({
   active: {
     color: BLUE,
     fontWeight: 'bold',
@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
   about: {
     flex: 1,
     color: LIGHTGRAY,
-    paddingBottom: 30
+    paddingBottom: 30,
+    textAlignVertical: 'bottom'
   },
   back: {
     flex: 1,
@@ -54,4 +55,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default styles
+export default style

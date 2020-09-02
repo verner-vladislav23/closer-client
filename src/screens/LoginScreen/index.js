@@ -14,15 +14,15 @@ const LoginScreen = ({ navigation }) => {
   const [errorMessage, setErrorMessage] = useState(null)
 
   const onScreenChange = () => {
-    //navigation.navigate('SignUpScreen')
-    navigation.dispatch(
-      CommonActions.reset({
-        index: 0,
-        routes: [
-          { name: 'SignUpScreen' }
-        ],
-      })
-    )
+    navigation.navigate('SignUpScreen')
+    // navigation.dispatch(
+    //   CommonActions.reset({
+    //     index: 0,
+    //     routes: [
+    //       { name: 'SignUpScreen' }
+    //     ],
+    //   })
+    // )
   }
 
   const onChangeUserName = (userName) => {
@@ -40,6 +40,8 @@ const LoginScreen = ({ navigation }) => {
       const response = await UserService.login({ username: userName, password: password })
       if (response.status == 'ok') {
         AsyncStorage.setItem('jwt', response.data)
+        AsyncStorage.setItem('username', userName)
+        console.log(userName)
         //navigation.navigate('UsersScreen')
 
         // todo warning

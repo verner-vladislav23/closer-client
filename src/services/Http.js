@@ -12,13 +12,14 @@ export default class Http {
     return await response.json()
   }
 
-  static async get (url, options = {}) {
+  static async get (url, options) {
     const response = await fetch(`${this.BASE_URL}${url}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
         'x-auth-token': await AsyncStorage.getItem('jwt')
-      }
+      },
+      body: JSON.stringify(options)
     })
     return this._parseResponse(response)
   }

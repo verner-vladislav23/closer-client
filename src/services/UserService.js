@@ -19,6 +19,10 @@ export default class UserService extends Http {
   }
 
   static getUser (userId) {
-    return this.get(`/user/profile/${userId}`)
+    return this.get('/user/profile?username='+ userId)
+  }
+
+  static putUser(payload) {
+    return this.put('/user/profile', payload)
   }
 }

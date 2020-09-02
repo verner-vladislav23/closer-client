@@ -38,7 +38,7 @@ const UsersScreen = ({ navigation }) => {
               />
             )}
           />
-          <Button title='Profile edit' onPress={() => onEditProfile(result)} />
+          <Button title='Profile edit' onPress={() => onEditProfile()} />
         </View>
       )}
     </View>
